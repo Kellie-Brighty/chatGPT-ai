@@ -5,8 +5,10 @@ import styles from "./index.module.css";
 export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
   const [result, setResult] = useState();
+  const [loading, setLoading] = useState(false);
 
   async function onSubmit(event) {
+    setLoading(true);
     event.preventDefault();
     const response = await fetch("/api/generate", {
       method: "POST",
@@ -18,6 +20,7 @@ export default function Home() {
     const data = await response.json();
     setResult(data.result);
     setAnimalInput("");
+    setLoading(false);
   }
 
   return (
@@ -40,7 +43,11 @@ export default function Home() {
           />
           <input type="submit" value="Generate names" />
         </form>
-        <div className={styles.result}>{result}</div>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div className={styles.result}>{result}</div>
+        )}
       </main>
     </div>
   );
