@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Lottie from "lottie-react";
 import robo from "../../public/first_santa.json";
 import styles from "../index.module.css";
@@ -7,6 +7,10 @@ import { IoReturnUpBack } from "react-icons/io5";
 
 export default function Gender() {
   const [gender, setGender] = useState("male");
+
+  useEffect(() => {
+    localStorage.setItem("enthralled_gender", "male");
+  }, []);
 
   return (
     <div className={styles.gender_container}>
@@ -25,6 +29,8 @@ export default function Gender() {
             </p>
           </div>
 
+          <p className={styles.gender_select_title}>Select gender</p>
+
           <div className={styles.gender_selector_container}>
             <button
               className={
@@ -32,7 +38,10 @@ export default function Gender() {
                   ? styles.gender_btn_selected
                   : styles.gender_btn
               }
-              onClick={() => setGender("male")}
+              onClick={() => {
+                setGender("male");
+                localStorage.setItem("enthralled_gender", "man");
+              }}
             >
               Man
             </button>
@@ -42,10 +51,19 @@ export default function Gender() {
                   ? styles.gender_btn_selected
                   : styles.gender_btn
               }
-              onClick={() => setGender("female")}
+              onClick={() => {
+                setGender("female");
+                localStorage.setItem("enthralled_gender", "woman");
+              }}
             >
               Woman
             </button>
+          </div>
+
+          <div className={styles.gender_action_btn_container}>
+            <Link href="/gift_process/age">
+              <p className={styles.next_question}>Next</p>
+            </Link>
           </div>
         </div>
       </div>

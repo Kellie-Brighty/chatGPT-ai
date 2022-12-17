@@ -183,7 +183,7 @@
   margin: auto;
 }
 .option_text {
-  width: '100%'
+  width: "100%";
 }
 .options_box_btn {
   padding: 10px 0px;
@@ -232,6 +232,7 @@
 }
 .gender_content_container {
   font-family: "ColfaxAI";
+  margin-top: 100px;
 }
 .gender_question_container {
   background-color: #fff;
@@ -244,6 +245,7 @@
 .gender_question_text {
   color: #373737;
   font-size: 18px;
+  max-width: 400px;
 }
 .gender_selector_container {
   display: flex;
@@ -257,7 +259,7 @@
   cursor: pointer;
   margin: 0px 10px;
   border-radius: 5px;
-  color: #fff;
+  color: #373737;
 }
 .gender_btn_selected {
   padding: 10px 35px;
@@ -268,4 +270,150 @@
   background-color: #4169e1;
   border-radius: 5px;
   color: #fff;
+}
+.gender_select_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-left: 10px;
+  width: 500px;
+}
+.gender_action_btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+.next_question {
+  background-color: #df2d32;
+  color: #fff;
+  padding: 10px 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.next_question_disabled {
+  background-color: #df2d3393;
+  color: #fff;
+  padding: 10px 35px;
+  cursor: not-allowed;
+  border-radius: 5px;
+}
+.age_container {
+  font-family: "ColfaxAI";
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.age_inner_flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+.age_content_container {
+  font-family: "ColfaxAI";
+  margin-top: 100px;
+  margin-left: 20px;
+}
+.age_input_container {
+  margin: 0px 10px;
+  border: 1px solid #4169e1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+.age_input {
+  outline: none;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 18px;
+}
+.price_container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.price_inner_flex {
+  display: flex;
+}
+.price_input_container {
+  display: flex;
+  align-items: center;
+}
+.price_range_title {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.price_input_box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #4169e1;
+  padding: 0px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.input {
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+}
+.hobbies_container {
+  font-family: "ColfaxAI";
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hobbies_inner_flex {
+  display: flex;
+}
+.hobbies_input_container {
+  margin-left: 10px;
+}
+.hobbies_input {
+  border: 1px solid #4169e1;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 450px;
+  border-radius: 5px;
+}
+.loading_container {
+  display: flex;
+  justify-content: center;
+}
+.loading_container_inner_flex {
+  display: flex;
+  align-items: center;
+  font-family: "ColfaxAI";
+}
+.loading_container_text {
+  font-size: 20px;
+  font-weight: bold;
+  width: 400px;
+}
+.result_container {
+  display: flex;
+  justify-content: center;
+  font-family: "ColfaxAI";
+  position: relative;
+}
+.result_inner_flex {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.main_result {
+  width: 500px;
+  margin-left: 10px;
+}
+.result_btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
 }
