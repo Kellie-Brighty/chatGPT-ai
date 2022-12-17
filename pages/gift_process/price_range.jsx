@@ -42,7 +42,7 @@ export default function PriceRange() {
                   value={min}
                   onChange={(e) => {
                     setMin(Number.parseInt(e.target.value));
-                    localStorage.setItem(
+                    global?.window && localStorage.setItem(
                       "enthralled_min_price",
                       Number.parseInt(e.target.value)
                     );
@@ -62,7 +62,7 @@ export default function PriceRange() {
                   value={max}
                   onChange={(e) => {
                     setMax(Number.parseInt(e.target.value));
-                    localStorage.setItem(
+                    global?.window && localStorage.setItem(
                       "enthralled_max_price",
                       Number.parseInt(e.target.value)
                     );

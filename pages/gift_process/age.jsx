@@ -6,7 +6,7 @@ import Lottie from "lottie-react";
 import robo from "../../public/age_santa.json";
 
 export default function Age() {
-  const gender = localStorage.getItem("enthralled_gender");
+  const gender = global?.window && localStorage.getItem("enthralled_gender");
   const [age, setAge] = useState();
 
   return (
@@ -37,7 +37,7 @@ export default function Age() {
               value={age}
               onChange={(e) => {
                 setAge(e.target.value);
-                localStorage.setItem("enthralled_age", e.target.value);
+                global?.window && localStorage.setItem("enthralled_age", e.target.value);
               }}
             />
             <p>years old</p>

@@ -87,10 +87,10 @@ export default function Hobbies() {
                 <button
                   className={styles.gender_btn_selected}
                   onClick={() => {
-                    localStorage.removeItem("enthralled_age");
-                    localStorage.removeItem("enthralled_gender");
-                    localStorage.removeItem("enthralled_min_price");
-                    localStorage.removeItem("enthralled_max_price");
+                    global?.window && localStorage.removeItem("enthralled_age");
+                    global?.window && localStorage.removeItem("enthralled_gender");
+                    global?.window && localStorage.removeItem("enthralled_min_price");
+                    global?.window && localStorage.removeItem("enthralled_max_price");
                   }}
                 >
                   Start Again
@@ -133,7 +133,7 @@ export default function Hobbies() {
               value={hobbies}
               onChange={(e) => {
                 setHobbies(e.target.value);
-                localStorage.setItem("enthralled_hobbies", e.target.value);
+                global?.window && localStorage.setItem("enthralled_hobbies", e.target.value);
               }}
             />
           </div>

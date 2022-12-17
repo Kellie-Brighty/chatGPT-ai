@@ -9,7 +9,7 @@ export default function Gender() {
   const [gender, setGender] = useState("male");
 
   useEffect(() => {
-    localStorage.setItem("enthralled_gender", "male");
+    global?.window && localStorage.setItem("enthralled_gender", "male");
   }, []);
 
   return (
@@ -40,7 +40,7 @@ export default function Gender() {
               }
               onClick={() => {
                 setGender("male");
-                localStorage.setItem("enthralled_gender", "man");
+                global?.window && localStorage.setItem("enthralled_gender", "man");
               }}
             >
               Man
@@ -53,7 +53,7 @@ export default function Gender() {
               }
               onClick={() => {
                 setGender("female");
-                localStorage.setItem("enthralled_gender", "woman");
+                global?.window && localStorage.setItem("enthralled_gender", "woman");
               }}
             >
               Woman
