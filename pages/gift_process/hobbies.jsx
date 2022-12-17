@@ -10,10 +10,13 @@ import robo_tree from "../../public/xmas_tree.json";
 export default function Hobbies() {
   const [hobbies, setHobbies] = useState();
   const [loading, setLoading] = useState(false);
-  const gender = localStorage.getItem("enthralled_gender");
-  const age = localStorage.getItem("enthralled_age");
-  const priceMin = localStorage.getItem("enthralled_min_price");
-  const priceMax = localStorage.getItem("enthralled_max_price");
+  const gender =
+    global?.window && localStorage.getItem("enthralled_gender");
+  const age = global?.window && localStorage.getItem("enthralled_age");
+  const priceMin =
+    global?.window && localStorage.getItem("enthralled_min_price");
+  const priceMax =
+    global?.window && localStorage.getItem("enthralled_max_price");
   const [result, setResult] = useState();
 
   async function onSubmit() {
@@ -80,7 +83,7 @@ export default function Hobbies() {
               dangerouslySetInnerHTML={{ __html: result }}
             />
             <div className={styles.result_btn_container}>
-              <Link href="/" >
+              <Link href="/">
                 <button
                   className={styles.gender_btn_selected}
                   onClick={() => {
