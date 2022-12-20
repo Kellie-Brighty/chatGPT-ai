@@ -311,12 +311,7 @@
   }
 }
 
-.gender_wrapper {
-  background-color: yellow;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .gender_container {
   display: flex;
   justify-content: center;
@@ -416,8 +411,8 @@
     justify-content: center;
     font-family: 'Montserrat';
     position: relative;
-    width: 100vw;
     align-items: center;
+    overflow: hidden;
   }
   .gender_inner_flex {
     display: flex;
@@ -491,9 +486,8 @@
     justify-content: center;
     font-family: 'Montserrat';
     position: relative;
-    width: 100vw;
+    /* width: 100vw; */
     align-items: center;
-    background-color: yellow;
   }
   .age_inner_flex {
     display: flex;
