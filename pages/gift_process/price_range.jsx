@@ -19,7 +19,7 @@ export default function PriceRange() {
 
       <div className={styles.price_inner_flex}>
         <Lottie animationData={robo} className={styles.gender_animation} />
-        <div className={styles.age_content_container}>
+        <div className={styles.price_content_container}>
           <div className={styles.gender_question_container}>
             <p className={styles.gender_question_text}>
               What's the price range of the gift you have in mind?

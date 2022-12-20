@@ -1,24 +1,11 @@
-@font-face {
-  font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
-      format("woff2"),
-    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
-    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 .main,
 .main input {
   font-size: 16px;
   line-height: 24px;
   color: #353740;
-  font-family: "ColfaxAI", Helvetica, sans-serif;
+  font-family: "Montserrat";
 }
 .main {
   display: flex;
@@ -73,6 +60,13 @@
   font-weight: bold;
   margin-top: 40px;
 }
+
+
+
+
+
+/* My own css stylings */
+
 .landing_main {
   display: flex;
   align-items: center;
@@ -91,7 +85,7 @@
 .landing_text {
   font-size: 30px;
   font-weight: bold;
-  font-family: "ColfaxAI";
+  font-family: "Montserrat";
   width: 400px;
   text-align: center;
   color: #373737;
@@ -102,7 +96,7 @@
   border: none;
   background-color: #4169e1;
   color: #fff;
-  font-family: "ColfaxAI";
+  font-family: "Montserrat";
   border-radius: 5px;
   font-size: 18px;
   margin-top: 30px;
@@ -116,7 +110,7 @@
   display: flex;
   width: 350px;
   justify-content: space-between;
-  font-family: "ColfaxAI";
+  font-family: "Montserrat";
   border-radius: 5px;
   box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
 }
@@ -144,6 +138,55 @@
   cursor: pointer;
   color: #ff9494;
 }
+
+/* Landing Media Query */
+
+@media only screen and (max-width: 600px) {
+  .landing_main .lottie_animation {
+    width: 50;
+    margin-top: 120px;
+  }
+  .landing_notification_text {
+    margin: 0px;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #373737;
+  }
+  .landing_toast {
+    position: absolute;
+    top: 2em;
+    right: -0em;
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+    font-family: "Montserrat";
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
+  }
+  .landing_text {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Montserrat";
+    width: 300px;
+    text-align: center;
+    color: #373737;
+  }
+  .landing_btn {
+    padding: 15px 40px;
+    cursor: pointer;
+    border: none;
+    background-color: #4169e1;
+    color: #fff;
+    font-family: "Montserrat";
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
+
+
 .options_container {
   display: flex;
   justify-content: center;
@@ -162,7 +205,7 @@
 }
 .options_inner_flex {
   display: flex;
-  font-family: "ColfaxAI";
+  font-family: "Montserrat";
   margin-top: 50px;
 }
 .options_box {
@@ -193,7 +236,7 @@
   border-radius: 5px;
   color: #fff;
   font-size: 16px;
-  font-weight: bold;
+  font-family: "Montserrat";
 }
 .options_box_btn_disabled {
   padding: 10px 0px;
@@ -203,7 +246,7 @@
   border-radius: 5px;
   color: #fff;
   font-size: 16px;
-  font-weight: bold;
+  font-family: "Montserrat";
 }
 .options_box_coming_soon {
   position: absolute;
@@ -218,34 +261,90 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+/* Options Media Query */
+
+@media only screen and (max-width: 600px) {
+  .options_inner_flex {
+    display: flex;
+    font-family: "Montserrat";
+    margin: 100px auto;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .options_back_btn {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  .options_box {
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 300px;
+    position: relative;
+  }
+  .options_christmas_gift_img {
+    width: 200px;
+    margin: auto;
+  }
+  .options_box_coming_soon {
+    position: absolute;
+    background-color: yellow;
+    padding: 10px;
+    right: 1em;
+    top: 0;
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+.gender_wrapper {
+  background-color: yellow;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .gender_container {
   display: flex;
   justify-content: center;
+  font-family: 'Montserrat';
   position: relative;
 }
 .gender_inner_flex {
   display: flex;
   align-items: center;
+  box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
+  padding: 30px 10px;
+  border-radius: 10px;
+  margin-top: 80px;
 }
 .gender_animation {
-  width: 400px;
+  width: 300px;
 }
 .gender_content_container {
-  font-family: "ColfaxAI";
-  margin-top: 100px;
+  font-family: "Montserrat";
 }
 .gender_question_container {
-  background-color: #fff;
-  box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
-  padding: 10px;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+
 }
 .gender_question_text {
   color: #373737;
   font-size: 18px;
   max-width: 400px;
+  font-weight: bold;
 }
 .gender_selector_container {
   display: flex;
@@ -260,6 +359,8 @@
   margin: 0px 10px;
   border-radius: 5px;
   color: #373737;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
 .gender_btn_selected {
   padding: 10px 35px;
@@ -270,10 +371,11 @@
   background-color: #4169e1;
   border-radius: 5px;
   color: #fff;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
 .gender_select_title {
   font-size: 18px;
-  font-weight: bold;
   margin-top: 40px;
   margin-left: 10px;
   width: 500px;
@@ -294,6 +396,7 @@
   border: none;
   outline: none;
   font-size: 16px;
+  font-family: "Montserrat"
 }
 .next_question_disabled {
   background-color: #df2d3393;
@@ -301,21 +404,64 @@
   padding: 10px 35px;
   cursor: not-allowed;
   border-radius: 5px;
+  font-family: "Montserrat"
 }
+
+
+/* Gender Media Query */
+
+@media only screen and (max-width: 600px) {
+  .gender_container {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    position: relative;
+    width: 100vw;
+    align-items: center;
+  }
+  .gender_inner_flex {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    width: 350px;
+    box-shadow: none;
+    border-radius: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  .gender_animation {
+    width: 300px;
+  }
+  .gender_question_text {
+    color: #373737;
+    font-size: 18px;
+    max-width: 300px;
+    font-weight: bold;
+  }
+  .gender_content_container {
+    font-family: "Montserrat";
+    margin: 0px auto;
+    width: 100%;
+  }
+}
+
+
 .age_container {
-  font-family: "ColfaxAI";
+  font-family: "Montserrat";
   position: relative;
   display: flex;
   justify-content: center;
 }
 .age_inner_flex {
   display: flex;
-  justify-content: space-evenly;
+  box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
+  padding: 30px 10px;
+  border-radius: 10px;
+  margin-top: 80px;
+  justify-content: center;
 }
 .age_content_container {
-  font-family: "ColfaxAI";
-  margin-top: 100px;
-  margin-left: 20px;
+  font-family: "Montserrat";
 }
 .age_input_container {
   margin: 0px 10px;
@@ -324,6 +470,8 @@
   display: flex;
   align-items: center;
   padding: 0px 10px;
+  justify-content: space-between;
+  width: 300px;
 }
 .age_input {
   outline: none;
@@ -331,7 +479,49 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   font-size: 18px;
+  font-family: "Montserrat";
 }
+
+
+/* Age Media Query */
+
+@media only screen and (max-width: 991px) {
+  .gender_container {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat';
+    position: relative;
+    width: 100vw;
+    align-items: center;
+    background-color: yellow;
+  }
+  .age_inner_flex {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    width: 350px;
+    box-shadow: none;
+    border-radius: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  .gender_animation {
+    width: 300px;
+  }
+  .gender_question_text {
+    color: #373737;
+    font-size: 18px;
+    max-width: 300px;
+    font-weight: bold;
+  }
+  .gender_content_container {
+    font-family: "Montserrat";
+    margin: 0px auto;
+    width: 100%;
+  }
+}
+
+
 .price_container {
   display: flex;
   justify-content: center;
@@ -339,6 +529,14 @@
 }
 .price_inner_flex {
   display: flex;
+  box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
+  padding: 30px 10px;
+  border-radius: 10px;
+  margin-top: 80px;
+}
+.price_content_container {
+  font-family: "Montserrat";
+  margin-left: 20px;
 }
 .price_input_container {
   display: flex;
@@ -361,15 +559,20 @@
   outline: none;
   height: 100%;
   width: 100%;
+  font-family: "Montserrat";
 }
 .hobbies_container {
-  font-family: "ColfaxAI";
+  font-family: "Montserrat";
   position: relative;
   display: flex;
   justify-content: center;
 }
 .hobbies_inner_flex {
   display: flex;
+  box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
+  padding: 30px 10px;
+  border-radius: 10px;
+  margin-top: 80px;
 }
 .hobbies_input_container {
   margin-left: 10px;
@@ -381,6 +584,7 @@
   font-size: 16px;
   width: 450px;
   border-radius: 5px;
+  font-family: "Montserrat";
 }
 .loading_container {
   display: flex;
@@ -389,7 +593,11 @@
 .loading_container_inner_flex {
   display: flex;
   align-items: center;
-  font-family: "ColfaxAI";
+  font-family: "Montserrat";
+  box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
+  padding: 30px 10px;
+  border-radius: 10px;
+  margin-top: 80px;
 }
 .loading_container_text {
   font-size: 20px;
@@ -399,21 +607,30 @@
 .result_container {
   display: flex;
   justify-content: center;
-  font-family: "ColfaxAI";
+  font-family: "Montserrat";
   position: relative;
 }
 .result_inner_flex {
   display: flex;
   align-items: center;
   margin-top: 40px;
+  box-shadow: 0 0 10px 2px rgba(204, 204, 204, 0.471);
+  padding: 30px 10px;
+  border-radius: 10px;
+  margin-top: 80px;
+}
+.result_title {
+  font-size: 18px;
+  width: 400px;
 }
 .main_result {
   width: 500px;
   margin-left: 10px;
+  font-weight: 600;
 }
 .result_btn_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 0px;
+  margin-top: 40px;
 }

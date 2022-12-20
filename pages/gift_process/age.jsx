@@ -37,7 +37,8 @@ export default function Age() {
               value={age}
               onChange={(e) => {
                 setAge(e.target.value);
-                global?.window && localStorage.setItem("enthralled_age", e.target.value);
+                global?.window &&
+                  localStorage.setItem("enthralled_age", e.target.value);
               }}
             />
             <p>years old</p>

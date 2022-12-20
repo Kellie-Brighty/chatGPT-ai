@@ -10,8 +10,7 @@ import robo_tree from "../../public/xmas_tree.json";
 export default function Hobbies() {
   const [hobbies, setHobbies] = useState();
   const [loading, setLoading] = useState(false);
-  const gender =
-    global?.window && localStorage.getItem("enthralled_gender");
+  const gender = global?.window && localStorage.getItem("enthralled_gender");
   const age = global?.window && localStorage.getItem("enthralled_age");
   const priceMin =
     global?.window && localStorage.getItem("enthralled_min_price");
@@ -58,12 +57,6 @@ export default function Hobbies() {
   if (result) {
     return (
       <div className={styles.result_container}>
-        <Link href="/gift_process/price_range">
-          <div className={styles.options_back_btn}>
-            <IoReturnUpBack />
-          </div>
-        </Link>
-
         <div className={styles.result_inner_flex}>
           <Lottie
             animationData={robo_tree}
@@ -71,11 +64,8 @@ export default function Hobbies() {
           />
           <div>
             <div className={styles.gender_question_container}>
-              <p className={styles.gender_question_text}>
-                <strong>
-                  Ho Ho Ho!! Merry Christmas my friend. Your gift ideas are
-                  ready.
-                </strong>
+              <p className={styles.result_title}>
+                Ho Ho Ho!! Merry Christmas my friend. Your gift ideas are ready.
               </p>
             </div>
             <div
@@ -88,9 +78,12 @@ export default function Hobbies() {
                   className={styles.gender_btn_selected}
                   onClick={() => {
                     global?.window && localStorage.removeItem("enthralled_age");
-                    global?.window && localStorage.removeItem("enthralled_gender");
-                    global?.window && localStorage.removeItem("enthralled_min_price");
-                    global?.window && localStorage.removeItem("enthralled_max_price");
+                    global?.window &&
+                      localStorage.removeItem("enthralled_gender");
+                    global?.window &&
+                      localStorage.removeItem("enthralled_min_price");
+                    global?.window &&
+                      localStorage.removeItem("enthralled_max_price");
                   }}
                 >
                   Start Again
@@ -133,7 +126,8 @@ export default function Hobbies() {
               value={hobbies}
               onChange={(e) => {
                 setHobbies(e.target.value);
-                global?.window && localStorage.setItem("enthralled_hobbies", e.target.value);
+                global?.window &&
+                  localStorage.setItem("enthralled_hobbies", e.target.value);
               }}
             />
           </div>

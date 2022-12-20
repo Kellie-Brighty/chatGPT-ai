@@ -14,7 +14,7 @@ const Landing = () => {
   return (
     <div className={styles.landing_main}>
       {notification && (
-        <motion.div animate={{ x: -50 }} className={styles.landing_toast}>
+        <motion.div className={styles.landing_toast}>
           <div>
             <div className={styles.landing_new_update}>
               <MdOutlineSecurityUpdateGood className={styles.update_icon} />
