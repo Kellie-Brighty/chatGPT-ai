@@ -63,7 +63,7 @@ export default function Hobbies() {
             className={styles.gender_animation}
           />
           <div>
-            <div className={styles.gender_question_container}>
+            <div className={styles.result_question_container}>
               <p className={styles.result_title}>
                 Ho Ho Ho!! Merry Christmas my friend. Your gift ideas are ready.
               </p>
@@ -75,7 +75,7 @@ export default function Hobbies() {
             <div className={styles.result_btn_container}>
               <Link href="/">
                 <button
-                  className={styles.gender_btn_selected}
+                  className={styles.result_btn_selected}
                   onClick={() => {
                     global?.window && localStorage.removeItem("enthralled_age");
                     global?.window &&

@@ -61,10 +61,6 @@
   margin-top: 40px;
 }
 
-
-
-
-
 /* My own css stylings */
 
 .landing_main {
@@ -186,7 +182,6 @@
   }
 }
 
-
 .options_container {
   display: flex;
   justify-content: center;
@@ -264,7 +259,7 @@
 
 /* Options Media Query */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 991px) {
   .options_inner_flex {
     display: flex;
     font-family: "Montserrat";
@@ -311,11 +306,10 @@
   }
 }
 
-
 .gender_container {
   display: flex;
   justify-content: center;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   position: relative;
 }
 .gender_inner_flex {
@@ -333,7 +327,6 @@
   font-family: "Montserrat";
 }
 .gender_question_container {
-
 }
 .gender_question_text {
   color: #373737;
@@ -391,7 +384,7 @@
   border: none;
   outline: none;
   font-size: 16px;
-  font-family: "Montserrat"
+  font-family: "Montserrat";
 }
 .next_question_disabled {
   background-color: #df2d3393;
@@ -399,17 +392,16 @@
   padding: 10px 35px;
   cursor: not-allowed;
   border-radius: 5px;
-  font-family: "Montserrat"
+  font-family: "Montserrat";
 }
-
 
 /* Gender Media Query */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 991px) {
   .gender_container {
     display: flex;
     justify-content: center;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     position: relative;
     align-items: center;
     overflow: hidden;
@@ -436,10 +428,21 @@
   .gender_content_container {
     font-family: "Montserrat";
     margin: 0px auto;
-    width: 100%;
+  }
+  .gender_action_btn_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+  .gender_select_title {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-left: 0px;
+    width: 350px;
   }
 }
-
 
 .age_container {
   font-family: "Montserrat";
@@ -477,17 +480,16 @@
   font-family: "Montserrat";
 }
 
-
 /* Age Media Query */
 
 @media only screen and (max-width: 991px) {
-  .gender_container {
+  .age_container {
     display: flex;
     justify-content: center;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     position: relative;
-    /* width: 100vw; */
     align-items: center;
+    overflow: hidden;
   }
   .age_inner_flex {
     display: flex;
@@ -502,6 +504,19 @@
   .gender_animation {
     width: 300px;
   }
+  .age_content_container {
+    margin: 0px auto;
+  }
+  .age_input_container {
+    margin: 0px 10px;
+    border: 1px solid #4169e1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    justify-content: space-between;
+    width: 300px;
+  }
   .gender_question_text {
     color: #373737;
     font-size: 18px;
@@ -514,7 +529,6 @@
     width: 100%;
   }
 }
-
 
 .price_container {
   display: flex;
@@ -555,6 +569,49 @@
   width: 100%;
   font-family: "Montserrat";
 }
+
+/* Price Media Query */
+
+@media only screen and (max-width: 991px) {
+  .price_container {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat";
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+  }
+  .price_inner_flex {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    width: 350px;
+    box-shadow: none;
+    border-radius: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  .gender_animation {
+    width: 300px;
+  }
+  .price_content_container {
+    margin: 0px auto;
+    margin-left: 0px;
+  }
+  .price_range_title {
+    margin-left: 0px;
+    font-weight: bold;
+  }
+  .price_input_box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #4169e1;
+    padding: 0px 10px;
+    margin-left: 0px;
+    border-radius: 5px;
+  }
+}
+
 .hobbies_container {
   font-family: "Montserrat";
   position: relative;
@@ -580,6 +637,49 @@
   border-radius: 5px;
   font-family: "Montserrat";
 }
+
+/* Hobbies Media Query */
+
+@media only screen and (max-width: 991px) {
+  .hobbies_container {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat";
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hobbies_inner_flex {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    width: 350px;
+    box-shadow: none;
+    border-radius: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  .gender_animation {
+    width: 300px;
+  }
+  .hobbies_content_container {
+    margin: 0px auto;
+    margin-left: 0px;
+  }
+  .hobbies_input_container {
+    margin-left: 0px;
+  }
+  .hobbies_input {
+    border: 1px solid #4169e1;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 350px;
+    border-radius: 5px;
+    font-family: "Montserrat";
+  }
+}
+
 .loading_container {
   display: flex;
   justify-content: center;
@@ -598,6 +698,33 @@
   font-weight: bold;
   width: 400px;
 }
+
+/* Loading Media Query */
+
+@media only screen and (max-width: 991px) {
+  .loading_container {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat";
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+  }
+  .loading_container_inner_flex {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    width: 350px;
+    box-shadow: none;
+    border-radius: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  .gender_animation {
+    width: 300px;
+  }
+}
+
 .result_container {
   display: flex;
   justify-content: center;
@@ -627,4 +754,64 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 40px;
+}
+.result_btn_selected {
+  padding: 10px 35px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #4169e1;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+/* Result Media Query */
+
+@media only screen and (max-width: 991px) {
+  .result_container {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat";
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+  }
+  .result_inner_flex {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    width: 350px;
+    box-shadow: none;
+    border-radius: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  .gender_animation {
+    width: 300px;
+  }
+  .result_title {
+    font-size: 16px;
+    width: 350px;
+  }
+  .result_question_container {
+    margin: 0px auto;
+  }
+  .main_result {
+    width: 350px;
+    margin-left: 0px;
+    font-weight: 600;
+  }
+  .result_btn_selected {
+    padding: 10px 35px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4169e1;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Montserrat";
+    font-weight: bold;
+  }
 }
